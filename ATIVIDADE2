@@ -1,0 +1,115 @@
+#include <stdio.h>
+
+#define MAX_SIZE 100
+
+void SomarMatrizes(int tam, int A[][MAX_SIZE], int B[][MAX_SIZE], int C[MAX_SIZE]) {
+ for (int i = 0; i < tam; i++) {
+ for (int j = 0; j < tam; j++) {
+  C[i][j] = A[i][j] + B[i][j];
+    }
+   }
+  }
+
+int main (){
+int tam;
+
+printf("3: ");
+scanf("%d", &tam);
+
+int A[MAX_SIZE][MAX_SIZE], B[MAX_SIZE][MAX_SIZE], C[MAX_SIZE][MAX_SIZE]; 
+
+printf("Preencha a matriz A:\n");
+    for (int i = 0; i < tamanho; i++) {
+        for (int j = 0; j < tamanho; j++) {
+            printf("3 [%d][%d]: ", i, j);
+            scanf("%d", &A[i][j]);
+}
+}
+
+printf("Preencha a matriz B:\n");
+    for (int i = 0; i < tamanho; i++) {
+        for (int j = 0; j < tamanho; j++) {
+            printf("Digite o valor para B[%d][%d]: ", i, j);
+            scanf("%d", &B[i][j]);
+        }
+    }
+
+printf("A matriz resultante C = A + B é:\n");
+    for (int i = 0; i < tamanho; i++) {
+        for (int j = 0; j < tamanho; j++) {
+            printf("%d ", C[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+Lembre-se de preencher as matrizes A e B com os valores desejados antes de chamar a função somarMatrizes, e ajustar o tamanho da matriz conforme necessário. Essa função irá calcular a matriz soma C e exibi-la no programa.
+
+
+
+
+User
+Preencher as matrizes A e B com valores
+ChatGPT
+
+2 / 2
+
+Claro, para preencher as matrizes A e B com valores, você pode usar um loop for para percorrer cada elemento das matrizes e solicitar ao usuário que insira os valores ou atribuir valores automaticamente. Aqui está um exemplo de como fazer isso:
+
+c
+Copy code
+#include <stdio.h>
+
+// Definindo o tamanho máximo da matriz
+#define MAX_SIZE 100
+
+// Função para somar duas matrizes e armazenar o resultado em C
+void somarMatrizes(int tamanho, int A[][MAX_SIZE], int B[][MAX_SIZE], int C[][MAX_SIZE]) {
+    for (int i = 0; i < tamanho; i++) {
+        for (int j = 0; j < tamanho; j++) {
+            C[i][j] = A[i][j] + B[i][j];
+        }
+    }
+}
+
+int main() {
+    int tamanho;
+    
+    // Solicitar o tamanho da matriz ao usuário
+    printf("Digite o tamanho das matrizes quadradas (por exemplo, 2 para matrizes 2x2): ");
+    scanf("%d", &tamanho);
+    
+    int A[MAX_SIZE][MAX_SIZE], B[MAX_SIZE][MAX_SIZE], C[MAX_SIZE][MAX_SIZE];
+    
+    // Preencher a matriz A com valores
+    printf("Preencha a matriz A:\n");
+    for (int i = 0; i < tamanho; i++) {
+        for (int j = 0; j < tamanho; j++) {
+            printf("Digite o valor para A[%d][%d]: ", i, j);
+            scanf("%d", &A[i][j]);
+        }
+    }
+
+    // Preencher a matriz B com valores
+    printf("Preencha a matriz B:\n");
+    for (int i = 0; i < tamanho; i++) {
+        for (int j = 0; j < tamanho; j++) {
+            printf("Digite o valor para B[%d][%d]: ", i, j);
+            scanf("%d", &B[i][j]);
+        }
+    }
+
+    somarMatrizes(tam, A, B, C);
+    
+    
+    printf("C = A + B é:\n");
+    for (int i = 0; i < tamanho; i++) {
+        for (int j = 0; j < tamanho; j++) {
+            printf("%d ", C[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
